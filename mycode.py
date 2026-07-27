@@ -17,6 +17,14 @@ df.loc[len(df.index)] = new_row_loc
 new_row_loc2 = {'Name': 'GF2', 'Age': 30, 'City': 'City2'}
 df.loc[len(df.index)] = new_row_loc2
 
+# Adding new rows for V4
+new_rows_v4 = [
+    {'Name': 'David', 'Age': 28, 'City': 'Mumbai'},
+    {'Name': 'Emma', 'Age': 26, 'City': 'Bengaluru'}
+]
+
+df = pd.concat([df, pd.DataFrame(new_rows_v4)], ignore_index=True)
+
 # Ensure the "data" directory exists at the root level
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
