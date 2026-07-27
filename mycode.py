@@ -25,6 +25,17 @@ new_rows_v4 = [
 
 df = pd.concat([df, pd.DataFrame(new_rows_v4)], ignore_index=True)
 
+
+# Adding new rows for V5
+new_rows_v5 = [
+    {'Name': 'Frank', 'Age': 32, 'City': 'Delhi'},
+    {'Name': 'Grace', 'Age': 27, 'City': 'Hyderabad'},
+    {'Name': 'Henry', 'Age': 29, 'City': 'Pune'}
+]
+
+df = pd.concat([df, pd.DataFrame(new_rows_v5)], ignore_index=True)
+
+
 # Ensure the "data" directory exists at the root level
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
